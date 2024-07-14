@@ -4,7 +4,7 @@
     </header>
     <section>
         <p>
-            In today's video, we're diving into the exciting world of Docker and MongoDB! If you've been following our series, you know we've already covered how to run .NET Web API with SQLite, SQL Server, and PostgreSQL. Today, we're taking it a step further by showing you how to connect your .NET Web API to MongoDB, all within a Docker container! 🌐💻
+            We are diving into the exciting world of Docker and MongoDB! If you've been following our series, you know we've already covered how to run .NET Web API with SQLite, SQL Server, and PostgreSQL. Today, we're taking it a step further by showing you how to connect your .NET Web API to MongoDB, all within a Docker container! 🌐💻
         </p>
     </section>
     <section>
