@@ -1,0 +1,32 @@
+﻿services:
+  webapi:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: "myapi_mongo:latest"
+    ports:
+      - "5003:80"
+    environment:
+      - ASPNETCORE_URLS=http://+:80;
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=mongodb://mongo:27017
+      - MongoDB__DatabaseName=MyMongoDatabase
+      - MongoDB__CollectionName=MyMongoCollection
+    depends_on:
+      - mongo
+    networks:
+      - my_custom_network
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - my_custom_network
+networks:
+  my_custom_network:
+    external: false
+
+volumes:
+  mongo-data:
